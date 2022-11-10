@@ -68,6 +68,16 @@ a:hover {
   line-height: 1.1;
 }
 
+.card-space {
+  margin-top: 110px;
+  margin-left: 20px;
+}
+
+.card-space2 {
+  margin-top: 30px;
+  margin-left: 20px;
+}
+
 .avatar {
   width: 32px;
   height: 32px;
@@ -1287,6 +1297,7 @@ a:hover {
   font-size: 1.3rem;
   margin-top: 0.6rem;
 }
+
 
 .card-blog .card-description {
   color: #4e4e4e;
