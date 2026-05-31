@@ -1,0 +1,27 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import SectionHeading from '@/components/SectionHeading.astro';
+import ProjectCard from '@/components/ProjectCard.astro';
+
+const projects = (await getCollection('projects', ({ data }) => !data.draft)).sort(
+  (a, b) => a.data.order - b.data.order
+);
+---
+
+<BaseLayout
+  title="Projects"
+  description="Production apps, cross-platform systems, and open-source libraries built by Rohit Chavan."
+>
+  <section class="container-page py-14 sm:py-20">
+    <SectionHeading eyebrow="Portfolio" title="Projects" />
+    <p class="reveal mt-4 max-w-2xl text-[var(--text-muted)]">
+      A selection of production apps, cross-platform systems, and open-source work — from
+      enterprise field-service platforms to a published Play Store app and Compose libraries.
+    </p>
+
+    <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {projects.map((project) => <ProjectCard project={project} />)}
+    </div>
+  </section>
+</BaseLayout>

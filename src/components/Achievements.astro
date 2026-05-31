@@ -1,0 +1,21 @@
+---
+import SectionHeading from './SectionHeading.astro';
+import Icon from './Icon.astro';
+import { achievements } from '@/data/experience';
+---
+
+<section id="achievements" class="bg-[var(--bg-soft)] scroll-mt-20">
+  <div class="container-page py-16 sm:py-20">
+    <SectionHeading eyebrow="Highlights" title="Achievements" />
+    <ul class="mt-10 grid gap-4 sm:grid-cols-2">
+      {
+        achievements.map((a) => (
+          <li class="reveal flex gap-3 rounded-2xl border border-[var(--border)] bg-[var(--bg)] p-5">
+            <Icon name="sparkle" class="mt-0.5 h-5 w-5 shrink-0 text-[var(--accent)]" />
+            <span class="text-sm text-[var(--text-muted)]">{a}</span>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</section>

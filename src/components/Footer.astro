@@ -1,0 +1,36 @@
+---
+import { site, socials } from '@/data/site';
+import Icon from './Icon.astro';
+
+const year = new Date().getFullYear();
+---
+
+<footer class="border-t border-[var(--border)] bg-[var(--bg-soft)]">
+  <div class="container-page flex flex-col items-center gap-6 py-10 sm:flex-row sm:justify-between">
+    <div class="text-center sm:text-left">
+      <p class="font-mono text-sm font-semibold">{site.name}</p>
+      <p class="mt-1 text-sm text-[var(--text-muted)]">
+        {site.role} · {site.location}
+      </p>
+    </div>
+
+    <div class="flex items-center gap-2">
+      {
+        socials.map((s) => (
+          <a
+            href={s.url}
+            target={s.icon === 'mail' ? undefined : '_blank'}
+            rel="noopener"
+            aria-label={s.name}
+            class="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-[var(--border)] text-[var(--text-muted)] transition hover:border-[var(--accent)] hover:text-[var(--text)]"
+          >
+            <Icon name={s.icon} class="h-[18px] w-[18px]" />
+          </a>
+        ))
+      }
+    </div>
+  </div>
+  <div class="container-page pb-8 text-center text-xs text-[var(--text-faint)]">
+    © {year} {site.name}. Built with Astro &amp; Tailwind.
+  </div>
+</footer>

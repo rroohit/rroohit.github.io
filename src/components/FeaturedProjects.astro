@@ -1,0 +1,37 @@
+---
+import { getCollection } from 'astro:content';
+import SectionHeading from './SectionHeading.astro';
+import ProjectCard from './ProjectCard.astro';
+import Icon from './Icon.astro';
+
+const projects = (await getCollection('projects', ({ data }) => !data.draft))
+  .filter((p) => p.data.featured)
+  .sort((a, b) => a.data.order - b.data.order);
+---
+
+<section id="projects" class="bg-[var(--bg-soft)] scroll-mt-20">
+  <div class="container-page py-16 sm:py-20">
+    <div class="flex items-end justify-between gap-4">
+      <SectionHeading eyebrow="Selected work" title="Featured projects" />
+      <a
+        href="/projects"
+        class="reveal hidden shrink-0 items-center gap-1 text-sm font-medium text-[var(--accent)] hover:underline sm:inline-flex"
+      >
+        All projects <Icon name="arrow-right" class="h-4 w-4" />
+      </a>
+    </div>
+
+    <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {projects.map((project) => <ProjectCard project={project} />)}
+    </div>
+
+    <div class="mt-8 sm:hidden">
+      <a
+        href="/projects"
+        class="inline-flex items-center gap-1 text-sm font-medium text-[var(--accent)]"
+      >
+        All projects <Icon name="arrow-right" class="h-4 w-4" />
+      </a>
+    </div>
+  </div>
+</section>

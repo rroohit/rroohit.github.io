@@ -1,0 +1,42 @@
+---
+import SectionHeading from './SectionHeading.astro';
+import { education } from '@/data/experience';
+---
+
+<section id="about" class="container-page scroll-mt-20 py-16 sm:py-20">
+  <SectionHeading eyebrow="About" title="Engineer who ships end-to-end" />
+  <div class="mt-8 grid gap-10 lg:grid-cols-[2fr_1fr]">
+    <div class="reveal space-y-4 text-[var(--text-muted)]">
+      <p>
+        I began my journey as an Android developer and have spent the last four years building
+        production software — from full-scale enterprise field-service apps to a cross-platform
+        product shipped on both Android and iOS. I care about clean architecture, performance, and
+        shipping features that hold up under real-world usage.
+      </p>
+      <p>
+        I work primarily in <span class="font-medium text-[var(--text)]">Kotlin</span>, with deep
+        experience in <span class="font-medium text-[var(--text)]">Jetpack Compose</span>,
+        <span class="font-medium text-[var(--text)]">MVVM &amp; Clean Architecture</span>, and
+        <span class="font-medium text-[var(--text)]">Kotlin Multiplatform</span> — where I recently
+        shipped an app sharing 95% of its codebase across platforms. Alongside product work, I keep
+        my fundamentals sharp with 900+ algorithmic problems solved on LeetCode.
+      </p>
+      <p>
+        I've also open-sourced libraries for the community and published an app on the Play Store.
+        I enjoy owning problems end-to-end — collaborating with product, design, and backend to take
+        features from idea to release.
+      </p>
+    </div>
+
+    <aside class="reveal">
+      <div class="rounded-2xl border border-[var(--border)] bg-[var(--bg-soft)] p-6">
+        <h3 class="font-mono text-xs font-semibold uppercase tracking-[0.2em] text-[var(--accent)]">
+          Education
+        </h3>
+        <p class="mt-3 font-semibold">{education.degree}</p>
+        <p class="mt-1 text-sm text-[var(--text-muted)]">{education.school}</p>
+        <p class="mt-1 text-sm text-[var(--text-faint)]">{education.period} · {education.detail}</p>
+      </div>
+    </aside>
+  </div>
+</section>

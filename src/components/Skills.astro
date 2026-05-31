@@ -1,0 +1,26 @@
+---
+import SectionHeading from './SectionHeading.astro';
+import { skillGroups } from '@/data/skills';
+---
+
+<section id="skills" class="container-page scroll-mt-20 py-16 sm:py-20">
+  <SectionHeading eyebrow="Toolkit" title="Skills & technologies" />
+  <div class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+    {
+      skillGroups.map((group) => (
+        <div class="reveal rounded-2xl border border-[var(--border)] bg-[var(--bg-soft)] p-5">
+          <h3 class="font-mono text-xs font-semibold uppercase tracking-[0.16em] text-[var(--accent)]">
+            {group.category}
+          </h3>
+          <ul class="mt-3 flex flex-wrap gap-1.5">
+            {group.items.map((item) => (
+              <li class="rounded-md border border-[var(--border)] bg-[var(--bg)] px-2.5 py-1 text-sm text-[var(--text-muted)]">
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))
+    }
+  </div>
+</section>

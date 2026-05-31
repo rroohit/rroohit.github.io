@@ -1,0 +1,146 @@
+---
+import SectionHeading from './SectionHeading.astro';
+import Icon from './Icon.astro';
+import { socials } from '@/data/site';
+
+const leetcode = socials.find((s) => s.icon === 'leetcode');
+
+const topics: { name: string; level: 'Strong' | 'Good' | 'Intermediate' | 'Beginner' }[] = [
+  { name: 'Arrays', level: 'Strong' },
+  { name: 'Hashing', level: 'Strong' },
+  { name: 'Recursion', level: 'Strong' },
+  { name: 'Strings', level: 'Good' },
+  { name: 'Two Pointers', level: 'Good' },
+  { name: 'Sliding Window', level: 'Good' },
+  { name: 'Binary Search', level: 'Good' },
+  { name: 'Backtracking', level: 'Good' },
+  { name: 'Heap / Priority Queue', level: 'Good' },
+  { name: 'Trie', level: 'Good' },
+  { name: 'Graphs (BFS, Dijkstra)', level: 'Good' },
+  { name: 'Stack', level: 'Intermediate' },
+  { name: 'Queue', level: 'Intermediate' },
+  { name: 'Trees', level: 'Intermediate' },
+  { name: 'BST', level: 'Intermediate' },
+  { name: 'Dynamic Programming', level: 'Intermediate' },
+  { name: 'Greedy', level: 'Intermediate' },
+  { name: 'Linked List', level: 'Beginner' },
+  { name: 'Monotonic Stack', level: 'Beginner' },
+  { name: 'Union Find (DSU)', level: 'Beginner' },
+  { name: 'Topological Sort', level: 'Beginner' },
+  { name: 'MST (Prim/Kruskal)', level: 'Beginner' },
+  { name: 'Segment Tree', level: 'Beginner' },
+  { name: 'Fenwick Tree (BIT)', level: 'Beginner' },
+  { name: 'Advanced Graphs', level: 'Beginner' },
+];
+
+const levelColors = {
+  Strong: 'text-green-600 border-green-500/25 bg-green-500/10',
+  Good: 'text-[var(--accent)] border-[var(--accent)]/30 bg-[var(--accent)]/10',
+  Intermediate: 'text-amber-600 border-amber-500/25 bg-amber-500/10',
+  Beginner: 'text-[var(--text-faint)] border-[var(--border)] bg-[var(--bg-soft)]',
+};
+
+// Group topics by level
+const grouped = {
+  Strong: topics.filter((t) => t.level === 'Strong'),
+  Good: topics.filter((t) => t.level === 'Good'),
+  Intermediate: topics.filter((t) => t.level === 'Intermediate'),
+  Beginner: topics.filter((t) => t.level === 'Beginner'),
+};
+---
+
+<section id="dsa" class="container-page scroll-mt-20 py-16 sm:py-20">
+  <SectionHeading eyebrow="Problem solving" title="Data structures & algorithms" />
+
+  <div class="reveal mt-10 space-y-8 max-w-4xl">
+    <p class="text-[var(--text-muted)]">
+      I keep my competitive fundamentals sharp with consistent LeetCode practice — solving problems
+      across these core topics and mastering their nuances.
+    </p>
+
+    <div class="flex flex-wrap gap-3">
+      {
+        leetcode && (
+          <a
+            href={leetcode.url}
+            target="_blank"
+            rel="noopener"
+            class="inline-flex items-center gap-2 rounded-lg bg-[var(--accent)] px-4 py-2 text-sm font-semibold text-[var(--accent-contrast)] transition hover:opacity-90"
+          >
+            <Icon name="leetcode" class="h-4 w-4" /> LeetCode profile
+          </a>
+        )
+      }
+      <a
+        href="/dsa"
+        class="inline-flex items-center gap-2 rounded-lg border border-[var(--border)] px-4 py-2 text-sm font-semibold transition hover:border-[var(--accent)]"
+      >
+        Read write-ups <Icon name="arrow-right" class="h-4 w-4" />
+      </a>
+    </div>
+
+    {/* Strong */}
+    <div>
+      <h3 class="font-mono text-xs font-semibold uppercase tracking-[0.16em] text-green-600 mb-3 pb-2 border-t border-[var(--border)] pt-4">
+        Strong
+      </h3>
+      <div class="flex flex-wrap gap-2">
+        {
+          grouped.Strong.map(({ name }) => (
+            <span class={`rounded-full border px-3 py-1.5 text-sm font-medium ${levelColors.Strong}`}>
+              {name}
+            </span>
+          ))
+        }
+      </div>
+    </div>
+
+    {/* Good */}
+    <div>
+      <h3 class="font-mono text-xs font-semibold uppercase tracking-[0.16em] text-[var(--accent)] mb-3 pb-2 border-t border-[var(--border)] pt-4">
+        Good
+      </h3>
+      <div class="flex flex-wrap gap-2">
+        {
+          grouped.Good.map(({ name }) => (
+            <span class={`rounded-full border px-3 py-1.5 text-sm font-medium ${levelColors.Good}`}>
+              {name}
+            </span>
+          ))
+        }
+      </div>
+    </div>
+
+    {/* Intermediate */}
+    <div>
+      <h3 class="font-mono text-xs font-semibold uppercase tracking-[0.16em] text-amber-600 mb-3 pb-2 border-t border-[var(--border)] pt-4">
+        Intermediate
+      </h3>
+      <div class="flex flex-wrap gap-2">
+        {
+          grouped.Intermediate.map(({ name }) => (
+            <span class={`rounded-full border px-3 py-1.5 text-sm font-medium ${levelColors.Intermediate}`}>
+              {name}
+            </span>
+          ))
+        }
+      </div>
+    </div>
+
+    {/* Beginner */}
+    <div>
+      <h3 class="font-mono text-xs font-semibold uppercase tracking-[0.16em] text-[var(--text-faint)] mb-3 pb-2 border-t border-[var(--border)] pt-4">
+        Beginner
+      </h3>
+      <div class="flex flex-wrap gap-2">
+        {
+          grouped.Beginner.map(({ name }) => (
+            <span class={`rounded-full border px-3 py-1.5 text-sm font-medium ${levelColors.Beginner}`}>
+              {name}
+            </span>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>

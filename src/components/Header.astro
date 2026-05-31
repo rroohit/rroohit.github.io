@@ -1,0 +1,114 @@
+---
+import { site, navLinks } from '@/data/site';
+import ThemeToggle from './ThemeToggle.astro';
+import Icon from './Icon.astro';
+---
+
+<header
+  id="site-header"
+  class="fixed inset-x-0 top-0 z-50 border-b border-transparent transition-colors duration-300"
+>
+  <div class="container-page flex h-16 items-center justify-between gap-4">
+    <a
+      href="/"
+      class="group inline-flex items-center gap-2 font-mono text-sm font-semibold tracking-tight"
+    >
+      <span
+        class="grid h-8 w-8 place-items-center rounded-lg bg-[var(--accent)] text-[var(--accent-contrast)] transition group-hover:scale-105"
+        >RC</span
+      >
+      <span class="hidden sm:inline">{site.name}</span>
+    </a>
+
+    <nav class="hidden items-center gap-1 md:flex" aria-label="Primary">
+      {
+        navLinks.map((link) => (
+          <a
+            href={link.href}
+            class="rounded-lg px-3 py-2 text-sm text-[var(--text-muted)] transition hover:bg-[var(--bg-soft)] hover:text-[var(--text)]"
+          >
+            {link.label}
+          </a>
+        ))
+      }
+    </nav>
+
+    <div class="flex items-center gap-2">
+      <a
+        href={site.resumeUrl}
+        target="_blank"
+        rel="noopener"
+        class="hidden items-center gap-1.5 rounded-lg border border-[var(--border)] px-3 py-2 text-sm font-medium text-[var(--text)] transition hover:border-[var(--accent)] sm:inline-flex"
+      >
+        <Icon name="download" class="h-4 w-4" />
+        Resume
+      </a>
+      <ThemeToggle />
+      <button
+        id="mobile-menu-button"
+        type="button"
+        class="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-[var(--border)] bg-[var(--bg-soft)] text-[var(--text-muted)] md:hidden"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <Icon name="menu" class="h-5 w-5" />
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <div
+    id="mobile-menu"
+    class="hidden border-t border-[var(--border)] bg-[var(--bg)]/95 backdrop-blur md:hidden"
+  >
+    <nav class="container-page flex flex-col py-3" aria-label="Mobile">
+      {
+        navLinks.map((link) => (
+          <a
+            href={link.href}
+            class="rounded-lg px-3 py-2.5 text-sm text-[var(--text-muted)] transition hover:bg-[var(--bg-soft)] hover:text-[var(--text)]"
+          >
+            {link.label}
+          </a>
+        ))
+      }
+      <a
+        href={site.resumeUrl}
+        target="_blank"
+        rel="noopener"
+        class="mt-1 inline-flex items-center gap-1.5 rounded-lg px-3 py-2.5 text-sm font-medium text-[var(--accent)]"
+      >
+        <Icon name="download" class="h-4 w-4" /> Download résumé
+      </a>
+    </nav>
+  </div>
+</header>
+
+<script>
+  // Frosted header on scroll
+  const header = document.getElementById('site-header');
+  const onScroll = () => {
+    if (!header) return;
+    const scrolled = window.scrollY > 8;
+    header.classList.toggle('border-[var(--border)]', scrolled);
+    header.classList.toggle('bg-[var(--bg)]/80', scrolled);
+    header.classList.toggle('backdrop-blur-md', scrolled);
+  };
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  // Mobile menu toggle
+  const btn = document.getElementById('mobile-menu-button');
+  const menu = document.getElementById('mobile-menu');
+  btn?.addEventListener('click', () => {
+    const open = menu?.classList.toggle('hidden') === false;
+    btn.setAttribute('aria-expanded', String(open));
+  });
+  menu?.querySelectorAll('a').forEach((a) =>
+    a.addEventListener('click', () => {
+      menu.classList.add('hidden');
+      btn?.setAttribute('aria-expanded', 'false');
+    })
+  );
+</script>

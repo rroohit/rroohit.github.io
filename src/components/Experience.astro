@@ -1,0 +1,42 @@
+---
+import SectionHeading from './SectionHeading.astro';
+import { experience } from '@/data/experience';
+---
+
+<section id="experience" class="bg-[var(--bg-soft)] scroll-mt-20">
+  <div class="container-page py-16 sm:py-20">
+    <SectionHeading eyebrow="Experience" title="Where I've worked" />
+
+    <ol class="mt-10 space-y-10 border-l border-[var(--border)] pl-6 sm:pl-8">
+      {
+        experience.map((job) => (
+          <li class="reveal relative">
+            <span class="absolute -left-[31px] top-1.5 grid h-3.5 w-3.5 place-items-center rounded-full border-2 border-[var(--accent)] bg-[var(--bg)] sm:-left-[39px]" />
+            <div class="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
+              <h3 class="text-lg font-semibold">
+                {job.role} <span class="text-[var(--accent)]">· {job.company}</span>
+              </h3>
+              <span class="font-mono text-xs text-[var(--text-faint)]">{job.period}</span>
+            </div>
+            {job.summary && <p class="mt-1 text-sm text-[var(--text-muted)]">{job.summary}</p>}
+            <ul class="mt-4 space-y-2">
+              {job.highlights.map((h) => (
+                <li class="flex gap-3 text-sm text-[var(--text-muted)]">
+                  <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--accent)]" />
+                  <span>{h}</span>
+                </li>
+              ))}
+            </ul>
+            <div class="mt-4 flex flex-wrap gap-1.5">
+              {job.tech.map((t) => (
+                <span class="rounded-md border border-[var(--border)] bg-[var(--bg)] px-2 py-0.5 font-mono text-xs text-[var(--text-muted)]">
+                  {t}
+                </span>
+              ))}
+            </div>
+          </li>
+        ))
+      }
+    </ol>
+  </div>
+</section>

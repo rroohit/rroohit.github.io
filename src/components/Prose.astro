@@ -1,0 +1,16 @@
+---
+/** Wraps long-form MDX/markdown content with themed typography. */
+---
+
+<div
+  class="prose prose-zinc max-w-none dark:prose-invert
+    prose-headings:scroll-mt-24 prose-headings:font-semibold prose-headings:tracking-tight
+    prose-a:text-[var(--accent)] prose-a:no-underline hover:prose-a:underline
+    prose-code:rounded prose-code:bg-[var(--bg-soft)] prose-code:px-1 prose-code:py-0.5
+    prose-code:font-mono prose-code:text-[0.85em] prose-code:before:content-none prose-code:after:content-none
+    prose-pre:rounded-xl prose-pre:border prose-pre:border-[var(--border)]
+    prose-img:rounded-xl prose-hr:border-[var(--border)]
+    prose-blockquote:border-l-[var(--accent)] prose-blockquote:text-[var(--text-muted)]"
+>
+  <slot />
+</div>

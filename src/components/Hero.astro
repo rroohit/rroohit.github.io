@@ -1,0 +1,111 @@
+---
+import { site, socials, stats } from '@/data/site';
+import Icon from './Icon.astro';
+---
+
+<section id="top" class="relative overflow-hidden">
+  <!-- background flourish -->
+  <div class="pointer-events-none absolute inset-0 -z-10 opacity-[0.55]" aria-hidden="true">
+    <div
+      class="absolute left-1/2 top-[-10rem] h-[28rem] w-[40rem] -translate-x-1/2 rounded-full bg-[radial-gradient(closest-side,var(--color-accent-500),transparent)] opacity-20 blur-3xl"
+    >
+    </div>
+  </div>
+
+  <div class="container-page grid items-center gap-12 py-20 sm:py-28 lg:grid-cols-[1.4fr_1fr]">
+    <div class="reveal">
+      <p
+        class="inline-flex items-center gap-2 rounded-full border border-[var(--border)] bg-[var(--bg-soft)] px-3 py-1 text-xs font-medium text-[var(--text-muted)]"
+      >
+        <span class="relative flex h-2 w-2">
+          <span
+            class="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-500 opacity-75"
+          ></span>
+          <span class="relative inline-flex h-2 w-2 rounded-full bg-green-500"></span>
+        </span>
+        Open to senior / SDE opportunities
+      </p>
+
+      <h1 class="mt-6 text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
+        Hi, I'm <span class="text-gradient">Rohit Chavan</span>.
+      </h1>
+      <p class="mt-4 max-w-xl text-lg text-[var(--text-muted)] sm:text-xl">
+        {site.role} with 4 years building scalable mobile and cross-platform apps in
+        <span class="font-semibold text-[var(--text)]">Kotlin</span>,
+        <span class="font-semibold text-[var(--text)]">Jetpack Compose</span>, and
+        <span class="font-semibold text-[var(--text)]">Kotlin Multiplatform</span> — with strong CS
+        fundamentals (900+ LeetCode).
+      </p>
+
+      <div class="mt-8 flex flex-wrap items-center gap-3">
+        <a
+          href="/projects"
+          class="inline-flex items-center gap-2 rounded-lg bg-[var(--accent)] px-5 py-2.5 text-sm font-semibold text-[var(--accent-contrast)] transition hover:opacity-90"
+        >
+          View my work <Icon name="arrow-right" class="h-4 w-4" />
+        </a>
+        <a
+          href="/#contact"
+          class="inline-flex items-center gap-2 rounded-lg border border-[var(--border)] px-5 py-2.5 text-sm font-semibold transition hover:border-[var(--accent)]"
+        >
+          Get in touch
+        </a>
+        <a
+          href={site.resumeUrl}
+          target="_blank"
+          rel="noopener"
+          class="inline-flex items-center gap-2 rounded-lg px-3 py-2.5 text-sm font-semibold text-[var(--text-muted)] transition hover:text-[var(--text)]"
+        >
+          <Icon name="download" class="h-4 w-4" /> Résumé
+        </a>
+      </div>
+
+      <div class="mt-8 flex items-center gap-2">
+        {
+          socials.map((s) => (
+            <a
+              href={s.url}
+              target={s.icon === 'mail' ? undefined : '_blank'}
+              rel="noopener"
+              aria-label={s.name}
+              class="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-[var(--border)] text-[var(--text-muted)] transition hover:border-[var(--accent)] hover:text-[var(--text)]"
+            >
+              <Icon name={s.icon} class="h-[18px] w-[18px]" />
+            </a>
+          ))
+        }
+      </div>
+    </div>
+
+    <div class="reveal relative mx-auto w-full max-w-xs lg:max-w-sm">
+      <div
+        class="absolute -inset-3 -z-10 rounded-[2rem] bg-gradient-to-tr from-[var(--accent)]/30 to-transparent blur-2xl"
+      >
+      </div>
+      <img
+        src="/img/rohit.jpg"
+        alt="Portrait of Rohit Chavan"
+        width="420"
+        height="520"
+        loading="eager"
+        class="aspect-[4/5] w-full rounded-[1.5rem] border border-[var(--border)] object-cover shadow-2xl"
+      />
+    </div>
+  </div>
+
+  <!-- Stats strip -->
+  <div class="container-page pb-8">
+    <dl
+      class="reveal grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-[var(--border)] bg-[var(--border)] sm:grid-cols-4"
+    >
+      {
+        stats.map((s) => (
+          <div class="bg-[var(--bg-soft)] px-5 py-6 text-center">
+            <dt class="order-2 mt-1 text-xs text-[var(--text-muted)]">{s.label}</dt>
+            <dd class="order-1 text-2xl font-bold tracking-tight sm:text-3xl">{s.value}</dd>
+          </div>
+        ))
+      }
+    </dl>
+  </div>
+</section>

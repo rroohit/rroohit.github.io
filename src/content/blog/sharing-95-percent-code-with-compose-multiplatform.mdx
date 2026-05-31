@@ -1,0 +1,80 @@
+---
+title: 'Sharing 95% of Code Across Android and iOS with Compose Multiplatform'
+description: 'Lessons from shipping a real cross-platform app with Kotlin Multiplatform — what shares cleanly, what stays native, and how to structure the project.'
+pubDate: 2026-02-15
+tags: ['kotlin', 'kmp', 'compose-multiplatform', 'architecture']
+draft: false
+---
+
+When I set out to build HyTorc for both Android and iOS, the goal was simple: ship features once,
+not twice. With **Kotlin Multiplatform (KMP)** and **Compose Multiplatform**, I ended up sharing
+about **95% of the codebase** — UI included. Here's how that breaks down and what I'd tell anyone
+starting out.
+
+## What shares cleanly
+
+The vast majority of an app is platform-agnostic logic:
+
+- **Business logic & domain models** — pure Kotlin, trivially shared.
+- **Networking** — [Ktor](https://ktor.io) replaces Retrofit and runs on every target.
+- **Persistence** — [SQLDelight](https://sqldelight.github.io) generates type-safe queries for
+  both platforms.
+- **DI** — [Koin](https://insert-koin.io) works across targets without ceremony.
+- **UI** — with Compose Multiplatform, the same `@Composable` tree renders on Android and iOS.
+
+```kotlin
+// commonMain — written once, runs everywhere
+class ProductRepository(
+    private val api: HyTorcApi,
+    private val db: ProductDatabase,
+) {
+    fun products(): Flow<List<Product>> = db.observeProducts()
+
+    suspend fun refresh() {
+        val remote = api.fetchProducts()
+        db.upsertAll(remote)
+    }
+}
+```
+
+## What stays native (the ~5%)
+
+Some things are genuinely platform-specific and shouldn't be forced into shared code:
+
+- **Biometric authentication** — Keystore vs. the Secure Enclave behave differently.
+- **App lifecycle & entry points** — `Activity` on Android, `UIViewController` on iOS.
+- **Platform integrations** — deep links, push tokens, and OS-specific permissions.
+
+The clean way to handle this is Kotlin's `expect`/`actual`:
+
+```kotlin
+// commonMain
+expect class BiometricAuthenticator {
+    suspend fun authenticate(): AuthResult
+}
+```
+
+Each platform provides its own `actual` implementation, while shared code depends only on the
+common contract.
+
+## How I structured it
+
+```
+composeApp/
+├─ commonMain/   // ~95%: UI, domain, data, DI
+├─ androidMain/  // actuals + Android entry point
+└─ iosMain/      // actuals + iOS bridge
+```
+
+Keep `commonMain` as the center of gravity. Push platform code to the edges and depend on
+interfaces, not implementations — the same Clean Architecture discipline that pays off in a
+single-platform app pays off double here.
+
+## Takeaways
+
+- **Start shared-first.** Drop to `expect`/`actual` only when you hit a real platform boundary.
+- **Pick multiplatform-native libraries** (Ktor, SQLDelight, Koin) from day one.
+- **95% is realistic** — but the last 5% is where platform polish lives. Budget for it.
+
+Cross-platform with KMP isn't a compromise anymore. With Compose Multiplatform, you get a shared,
+testable codebase *and* a native feel on each platform.

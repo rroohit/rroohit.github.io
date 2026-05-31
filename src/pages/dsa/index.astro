@@ -1,0 +1,37 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import SectionHeading from '@/components/SectionHeading.astro';
+import Icon from '@/components/Icon.astro';
+import { socials } from '@/data/site';
+
+const leetcode = socials.find((s) => s.icon === 'leetcode');
+---
+
+<BaseLayout
+  title="DSA"
+  description="Algorithm and data-structure write-ups — graphs, dynamic programming, and advanced data structures."
+>
+  <section class="container-page max-w-3xl py-14 sm:py-20">
+    <SectionHeading eyebrow="Problem solving" title="DSA write-ups" />
+    <p class="reveal mt-4 text-[var(--text-muted)]">
+      Selected problems I found worth writing up — the intuition, approach, and complexity
+      trade-offs. 900+ solved overall on
+      {
+        leetcode && (
+          <a
+            href={leetcode.url}
+            target="_blank"
+            rel="noopener"
+            class="text-[var(--accent)] hover:underline"
+          >
+            LeetCode
+          </a>
+        )
+      }.
+    </p>
+
+    <p class="mt-10 rounded-xl border border-dashed border-[var(--border)] p-8 text-center text-[var(--text-muted)]">
+      Write-ups coming soon.
+    </p>
+  </section>
+</BaseLayout>
