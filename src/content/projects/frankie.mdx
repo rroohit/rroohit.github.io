@@ -1,0 +1,39 @@
+---
+title: 'Frankie — Everyday Tools'
+summary: 'A calm, offline-first toolbox for Android and iOS — 10 everyday tools in one Kotlin Multiplatform app with a fully shared Compose UI. No ads, no account, works offline.'
+role: 'Solo developer'
+period: '2026'
+tech: ['Kotlin Multiplatform', 'Compose Multiplatform', 'Room (KMP)', 'Decompose', 'Koin', 'DataStore', 'Coroutines', 'Flow', 'MVVM', 'Clean Architecture']
+featured: true
+order: 0
+status: 'in-progress'
+links: {}
+cover: '../../assets/projects/frankie.png'
+draft: false
+---
+
+Frankie bundles the small utilities you reach for every day — calculator, unit converter, world
+clock, age calculator, stopwatch & timer, tip splitter, number-to-words, text tools and more —
+into one polished, ad-free app. Everything runs on-device: no account, no tracking, fully offline.
+
+## Product
+
+- **10 free tools** across math, time, text, and utility categories, discoverable through
+  ranked search, categories, favorites, and a results-history ledger that reopens any tool
+  pre-filled.
+- **A custom design system** — soft-tactile, strict-flat components with 11 curated color
+  themes, light/dark modes, and a shared component gallery for QA.
+- **Privacy by design** — everything you type stays on the device; see the
+  [privacy policy](/frankie/privacy).
+
+## Engineering
+
+- **Kotlin Multiplatform + Compose Multiplatform** — one shared codebase (UI included) shipping
+  to both Android and iOS.
+- **MVVM + Clean Architecture** across 20+ Gradle modules with convention plugins; feature
+  modules own their domain logic with JVM-fast unit tests.
+- **Room (KMP)** activity ledger with a sync-ready schema, **DataStore** preferences,
+  **Decompose** type-safe navigation, and **Koin** DI.
+- Firebase **Crashlytics** on both platforms as the only third-party SDK.
+
+{/* TODO: add Play Store / App Store links to `links` once the app is live. */}
