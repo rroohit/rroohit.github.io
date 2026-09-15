@@ -1,0 +1,18 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Prose from '@/components/Prose.astro';
+// Mirror of the app repo's .sayro/legal/PRIVACY_POLICY.md (the master copy) — also rendered
+// in-app on the Privacy policy screen. Keep all three in sync when the policy changes.
+import { Content as Policy } from '@/data/sayro-privacy.md';
+---
+
+<BaseLayout
+  title="Sayro — Privacy Policy"
+  description="Privacy policy for Sayro, the AI photo-styling app: what it collects, who else sees it, and how to delete it."
+>
+  <section class="container-page max-w-3xl py-14 sm:py-20">
+    <Prose>
+      <Policy />
+    </Prose>
+  </section>
+</BaseLayout>
