@@ -1,0 +1,19 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Prose from '@/components/Prose.astro';
+// Account-deletion instructions for Sayro, linked from the Google Play Data safety
+// declaration. This page is the copy Play points at — keep it in sync with the
+// in-app Settings → Delete account flow and with the Sayro privacy policy.
+import { Content as DeleteAccount } from '@/data/sayro-delete-account.md';
+---
+
+<BaseLayout
+  title="Sayro — Delete your account"
+  description="How to delete your Sayro account and what happens to your data: delete it in the app immediately, or email support if you cannot sign in."
+>
+  <section class="container-page max-w-3xl py-14 sm:py-20">
+    <Prose>
+      <DeleteAccount />
+    </Prose>
+  </section>
+</BaseLayout>
