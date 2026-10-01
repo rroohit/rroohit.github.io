@@ -1,6 +1,6 @@
 # Sayro — Privacy Policy
 
-**Last updated: 15 September 2026**
+**Last updated: 1 October 2026**
 
 Sayro turns a photo you upload into a new image in a chosen style. This policy
 explains what we collect, why, who else sees it, and how to get rid of it.
@@ -78,6 +78,35 @@ publish. Nothing else.
 
 **We never sell your data, and we never share it for advertising.**
 
+## Photos and face data
+
+Sayro does not use face recognition. We never detect faces, measure facial
+features, or create a faceprint, face template or any other identifier from
+your photos. We treat your photo only as a picture.
+
+The photos you upload usually show a face. We use a photo only to make the
+image you asked for: we send it, with the style's instruction, to OpenAI's
+image model, which returns the new image. Before an image you made becomes
+visible to other people, when you share a creation, publish a style, or set
+a profile photo, we also send that generated image to OpenAI's moderation
+service to check it is allowed. Your uploaded photo itself is never shown
+to anyone else.
+
+OpenAI receives the image without your name, username, phone number, email
+or any account identifier, and does not use it to train its models. For
+image generation, OpenAI keeps the request for up to 30 days for abuse
+monitoring and then deletes it, unless the law requires it to be kept
+longer. The moderation check keeps nothing.
+
+We store your uploaded photo and the image generated from it in Google
+Firebase Storage, in the asia-south1 (Mumbai) region, private to your
+account. We never sell your photos, never use them for advertising, and
+never give them to anyone other than OpenAI, as described above.
+
+Your uploaded photo is kept until you delete the creation made from it, or
+delete your account. Either one deletes it, together with the generated
+image and any copy you shared.
+
 ## What other people can see
 
 Sayro has two independent privacy gates and both must open before a stranger
@@ -86,7 +115,8 @@ sees a creation:
 1. **You share that specific creation.** A creation you have not shared is
    private, permanently.
 2. **Your account setting allows it.** In Settings → *Who can see your
-   creations*, "Only me" hides your shared creations from everyone.
+   creations*, "People who follow you" shows your shared creations only to
+   people you have approved to follow you.
 
 Two things are worth knowing because they surprise people:
 
@@ -94,7 +124,7 @@ Two things are worth knowing because they surprise people:
   you published. Publishing a style shares what it *produces*, not the words
   behind it.
 - A style you published **stays available to others even if you set your
-  account to "Only me"**. To take a style out of circulation, open it and hide
+  account to "People who follow you"**. To take a style out of circulation, open it and hide
   it.
 
 ## How long we keep things
