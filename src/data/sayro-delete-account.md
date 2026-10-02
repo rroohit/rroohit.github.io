@@ -18,7 +18,7 @@ You do not need to contact us, and there is no waiting period.
 
 ## If you cannot access the app
 
-Email **support@sayro.app** from the email address on your account, or including
+Email **sayro.team@gmail.com** from the email address on your account, or including
 the phone number you sign in with. We will verify that you control the account
 before deleting anything, and complete the deletion within 30 days.
 
@@ -41,4 +41,4 @@ before deleting anything, and complete the deletion within 30 days.
 
 ## Questions
 
-**support@sayro.app**
+**sayro.team@gmail.com**

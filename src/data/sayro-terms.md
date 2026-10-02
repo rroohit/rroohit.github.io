@@ -133,4 +133,4 @@ have exclusive jurisdiction.
 
 ## Contact
 
-**support@sayro.app**
+**sayro.team@gmail.com**

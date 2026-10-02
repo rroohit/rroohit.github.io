@@ -8,7 +8,7 @@ explains what we collect, why, who else sees it, and how to get rid of it.
 ## Who we are
 
 Sayro is operated by the Sayro team. For any privacy question, or to exercise
-any right below, contact **support@sayro.app**.
+any right below, contact **sayro.team@gmail.com**.
 
 ## What we collect
 
@@ -152,7 +152,7 @@ the transaction, not your photos or your creations.
 - **Access and correction.** Your profile is editable in the app at any time.
 - **Deletion.** Settings → Delete account, in-app, immediately, without
   contacting us.
-- **Getting a copy of your data.** Email **support@sayro.app** and we will
+- **Getting a copy of your data.** Email **sayro.team@gmail.com** and we will
   provide one.
 - **Complaints.** If you are in India you may complain to the Data Protection
   Board. If you are in the EU or UK, to your local supervisory authority.
@@ -160,7 +160,7 @@ the transaction, not your photos or your creations.
 ## Children
 
 Sayro is not for children under 13. If you believe a child under 13 has an
-account, email **support@sayro.app** and we will remove it.
+account, email **sayro.team@gmail.com** and we will remove it.
 
 ## Security
 
