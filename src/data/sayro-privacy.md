@@ -1,6 +1,6 @@
 # Sayro — Privacy Policy
 
-**Last updated: 1 October 2026**
+**Last updated: 2 October 2026**
 
 Sayro turns a photo you upload into a new image in a chosen style. This policy
 explains what we collect, why, who else sees it, and how to get rid of it.
@@ -105,7 +105,8 @@ never give them to anyone other than OpenAI, as described above.
 
 Your uploaded photo is kept until you delete the creation made from it, or
 delete your account. Either one deletes it, together with the generated
-image and any copy you shared.
+image and any copy you shared. If a creation fails, we delete it and its
+uploaded photo within 7 days.
 
 ## What other people can see
 
