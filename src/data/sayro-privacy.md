@@ -2,8 +2,9 @@
 
 **Last updated: 10 October 2026**
 
-Sayro turns a photo you upload into a new image in a chosen style. This policy
-explains what we collect, why, who else sees it, and how to get rid of it.
+Sayro turns a photo you upload into a new image in a chosen style. Sayro is
+the app for Android and iOS and the website at sayro.in; this policy covers
+both. It explains what we collect, why, who else sees it, and how to get rid of it.
 
 ## Who we are
 
@@ -15,6 +16,10 @@ any right below, contact **sayro.team@gmail.com**.
 **Account details.** Your phone number, or the email address attached to your
 Google or Apple account, depending on how you sign in. Sign-in is handled by
 Firebase Authentication; we never see or store your password.
+
+**Browsing without an account.** If you browse Sayro without signing in, we
+create an anonymous account identifier so you can view what is public. It
+holds no name, email or phone number.
 
 **Your profile.** Username, optional display name, optional bio, optional
 profile photo. All of this is visible to other signed-in Sayro users — that is
@@ -48,7 +53,29 @@ cannot be credited twice. **We never see your card, UPI or bank details**; the
 payment happens entirely inside Google Play or the App Store.
 
 **Crash reports.** If the app crashes we receive a diagnostic report so we can
-fix it.
+fix it. The website does not send crash reports.
+
+## On the website
+
+**What the website keeps in your browser.** To keep you signed in and to
+work smoothly, the website stores a few things in your browser's own storage:
+your sign-in session, a copy of the content you have viewed so pages load
+faster, your own profile, whether you have accepted the photo notice, and
+likes or saves not yet sent. None of it is used for advertising. Signing out
+ends your session; clearing your browser's data for sayro.in removes all of
+it.
+
+**No advertising or analytics cookies.** The website uses no advertising,
+analytics or tracking tools.
+
+**Google reCAPTCHA.** To block automated abuse, the website uses Google
+reCAPTCHA Enterprise. It checks your browser and how it behaves to tell people
+from bots, and may set its own cookies. Google's Privacy Policy
+(https://policies.google.com/privacy) and Terms
+(https://policies.google.com/terms) apply to it.
+
+**Coins on the website.** You can spend coins on the website, but you can't
+buy them there; coins are bought only in the apps.
 
 ## Who else sees your data
 
@@ -59,8 +86,8 @@ phone number, email, or any account identifier along with it. See OpenAI's
 policies at https://openai.com/policies for how they handle data received
 through their API.
 
-**Google Firebase.** Authentication, database, file storage and server
-functions run on Google Firebase. Data is stored in Google's **asia-south1
+**Google Firebase.** Authentication, database, file storage, server
+functions and website hosting run on Google Firebase. Data is stored in Google's **asia-south1
 (Mumbai)** region. Google processes this data on our behalf.
 
 **RevenueCat.** When you buy coins, the store tells RevenueCat and RevenueCat
@@ -133,13 +160,15 @@ Two things are worth knowing because they surprise people:
 We keep your data while your account exists. When you delete your account
 (Settings → Delete account) we immediately delete your profile, your username
 reservation, every creation and its source photo, everything you shared, and
-every style you published.
+every style you published. If you can't sign in, you can ask us to delete your
+account by emailing **sayro.team@gmail.com**; once we have confirmed it's you,
+we delete it within 30 days.
 
 **Two things survive, and both belong to other people.** Images other people
-generated using your styles remain theirs, until they delete them. And we keep the internal usage
-records that other creators' activity counts are calculated from — with your
-account identifier removed from them, so they no longer identify you. We keep
-those indefinitely.
+generated using your styles remain theirs, until they delete them. And we keep
+the internal usage records that other creators' activity counts are calculated
+from — with your account identifier removed from them, so they no longer
+identify you. We keep those indefinitely.
 
 Reports you have filed are retained so we can act on them and detect repeat
 abuse. We delete them 1 year after your account is deleted.
@@ -152,8 +181,8 @@ tax and accounting law requires.
 ## Your rights
 
 - **Access and correction.** Your profile is editable in the app at any time.
-- **Deletion.** Settings → Delete account, in-app, immediately, without
-  contacting us.
+- **Deletion.** Settings → Delete account, in the app or on the website,
+  immediately, without contacting us.
 - **Getting a copy of your data.** Email **sayro.team@gmail.com** and we will
   provide one.
 - **Complaints.** If you are in India you may complain to the Data Protection
@@ -161,17 +190,18 @@ tax and accounting law requires.
 
 ## Children
 
-Sayro is not for children under 13. If you believe a child under 13 has an
-account, email **sayro.team@gmail.com** and we will remove it.
+Sayro is only for people aged 18 and over. If you believe someone under 18
+has an account, email **sayro.team@gmail.com** and we will remove it.
 
 ## Security
 
 Data is encrypted in transit and at rest by Firebase. Access to your private
 creations is enforced by server-side security rules, not by the app — the app
 cannot grant itself access it should not have. We use Firebase App Check to
-reject requests that do not come from a genuine copy of Sayro.
+reject requests that do not come from a genuine copy of the Sayro app or
+website.
 
 ## Changes
 
-If we change this policy materially we will tell you in the app before the
-change takes effect.
+If we change this policy materially we will tell you in the app and on the
+website before the change takes effect.

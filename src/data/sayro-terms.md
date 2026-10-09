@@ -1,14 +1,14 @@
 # Sayro — Terms of Service
 
-**Last updated: 11 September 2026**
+**Last updated: 10 October 2026**
 
-By using Sayro you agree to these terms. If you do not agree, do not use it.
+Sayro is the Sayro app for Android and iOS and the website at sayro.in. By
+using Sayro you agree to these terms. If you do not agree, do not use it.
 
 ## Who can use Sayro
 
-You must be at least 13 years old. If you are under the age of majority where
-you live, you may use Sayro only with a parent or guardian's permission. One
-account per person. You are responsible for what happens on your account.
+You must be at least 18 years old. One account per person. You are
+responsible for what happens on your account.
 
 ## What Sayro does
 
@@ -38,12 +38,10 @@ shown to anyone — including people who use it.
 - Publishing a style lets others apply it to their own photos. You cannot
   un-ring that bell for images already made; hiding or deleting a style stops
   *future* use, and images already generated with it remain their makers' own.
-- You may only publish a style built on Sayro's own catalogue styles or on a
-  style you published yourself. **Publishing a style built on another user's
-  style is not permitted** and is blocked.
-- Styles built on Sayro's catalogue are marked as such, and do not accrue
-  creator credit — the underlying instruction is ours, not yours.
-- Sayro's catalogue styles and their underlying instructions remain our
+- You can publish a style only from a creation made from your own
+  description. Sayro's built-in styles and other people's styles can't be
+  published as yours.
+- Sayro's built-in styles and their underlying instructions remain our
   property.
 
 ## Acceptable use — zero tolerance
@@ -76,7 +74,8 @@ They have no cash value, cannot be transferred to another account, cannot be
 redeemed for cash, and cannot be sold or exchanged outside the app.
 
 **Buying coins.** Coin packs are sold through Google Play or the Apple App
-Store, and those purchases are governed by that store's terms as well as
+Store, inside the apps (not on the website), and those purchases are
+governed by that store's terms as well as
 these. The store takes the payment — we never see or hold your card details.
 The price you are shown is the store's own price for your country, including
 any tax it collects.
@@ -92,8 +91,9 @@ value they had when you bought them.
 **There is a daily limit** on how many images one account can generate, to keep
 the service working for everyone. Hitting it does not cost coins.
 
-**Refunds.** Coins are consumable and are credited immediately, so they are not
-refundable once bought, except where the law where you live requires otherwise
+**Refunds.** Coins are consumable and are added to your balance once the
+store confirms the purchase, so they are not refundable once bought, except
+where the law where you live requires otherwise
 or the store's own refund policy applies. Refunds are handled by the store, not
 by us — contact Google Play or Apple. If a purchase is refunded we record it,
 and coins you have already spent on images you already received are not
@@ -106,7 +106,8 @@ payment.**
 
 ## Ending your use
 
-You may delete your account at any time in Settings. We may suspend or
+You may delete your account at any time in Settings, in the app or on the
+website. We may suspend or
 terminate an account that breaks these terms, and for serious breaches —
 particularly anything in the zero-tolerance list — we will do so immediately
 and without warning.
