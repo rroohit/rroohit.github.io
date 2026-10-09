@@ -1,6 +1,6 @@
 # Sayro — Privacy Policy
 
-**Last updated: 2 October 2026**
+**Last updated: 10 October 2026**
 
 Sayro turns a photo you upload into a new image in a chosen style. This policy
 explains what we collect, why, who else sees it, and how to get rid of it.
@@ -136,16 +136,18 @@ reservation, every creation and its source photo, everything you shared, and
 every style you published.
 
 **Two things survive, and both belong to other people.** Images other people
-generated using your styles remain theirs. And we keep the internal usage
+generated using your styles remain theirs, until they delete them. And we keep the internal usage
 records that other creators' activity counts are calculated from — with your
-account identifier removed from them, so they no longer identify you.
+account identifier removed from them, so they no longer identify you. We keep
+those indefinitely.
 
 Reports you have filed are retained so we can act on them and detect repeat
-abuse.
+abuse. We delete them 1 year after your account is deleted.
 
 **Purchase records are kept after deletion**, because we are required to keep
 them: a record of a sale is a tax and accounting record, not a profile. It is
-the transaction, not your photos or your creations.
+the transaction, not your photos or your creations. We keep them for as long as
+tax and accounting law requires.
 
 ## Your rights
 
