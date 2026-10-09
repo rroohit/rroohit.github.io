@@ -9,6 +9,10 @@ export default defineConfig({
   // User site -> served at the domain root. No `base` needed.
   site: 'https://rroohit.github.io',
   integrations: [mdx(), sitemap()],
+  redirects: {
+    // Old Sayro account-deletion URL; the page now lives under /sayro/.
+    '/delete-account': '/sayro/delete-account/',
+  },
   markdown: {
     shikiConfig: {
       themes: { light: 'github-light', dark: 'github-dark' },
