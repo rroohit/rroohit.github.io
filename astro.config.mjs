@@ -10,8 +10,8 @@ export default defineConfig({
   site: 'https://rroohit.github.io',
   integrations: [mdx(), sitemap()],
   redirects: {
-    // Old Sayro account-deletion URL; the page now lives under /sayro/.
-    '/delete-account': '/sayro/delete-account/',
+    // Old Sayro account-deletion URL; the page now lives on sayro.in.
+    '/delete-account': 'https://sayro.in/delete-account',
   },
   markdown: {
     shikiConfig: {
