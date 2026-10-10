@@ -1,0 +1,18 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Prose from '@/components/Prose.astro';
+// Mirror of the app repo's .frankie/store/ACCOUNT_DELETION.md (the master copy). This URL is the
+// "Delete account URL" in the Play Console Data safety form — keep it live and in sync.
+import { Content as DeleteAccount } from '@/data/frankie-delete-account.md';
+---
+
+<BaseLayout
+  title="Frankie — Delete your account"
+  description="How to delete your Frankie account and its data, in the app or by email, and what gets deleted."
+>
+  <section class="container-page max-w-3xl py-14 sm:py-20">
+    <Prose>
+      <DeleteAccount />
+    </Prose>
+  </section>
+</BaseLayout>
