@@ -1,7 +1,7 @@
 # Privacy Policy — Frankie
 
 
-**Last updated: 10 October 2026**
+**Last updated: 11 October 2026**
 
 Frankie ("the app", "we", "us") is a collection of everyday utility tools for Android and iOS,
 developed by the Sayro team. This policy explains what data the app does and does not handle.
@@ -34,12 +34,15 @@ app**. You can also clear History from within the app.
 
 ## 3. Optional account, backup and sync
 
-You can use every tool without an account. If you choose to **sign in with Google**, Frankie uses
-**Google Firebase Authentication** to create your account, and then stores the following in
-**Google Firebase** (Cloud Firestore and Cloud Storage for Firebase), linked to your account:
+You can use every tool without an account. If you choose to **sign in with Google** or **Sign in
+with Apple** (on iPhone), Frankie uses **Google Firebase Authentication** to create your account, and
+then stores the following in **Google Firebase** (Cloud Firestore and Cloud Storage for Firebase),
+linked to your account:
 
 - **Account details**: your name, email address, profile photo link, and a unique account ID, as
-  provided by Google when you sign in, plus the date your account was created
+  provided by Google or Apple when you sign in, plus the date your account was created. With Sign in
+  with Apple you choose whether to share your name, and you can hide your email address: Apple then
+  gives us a private relay address that forwards to you.
 - **Profile edits**: the display name you set and, if you choose one, a **profile photo** you upload
 - **Backup and sync data**: your History, Favorites, Saved cities, usage counts, and Preferences
   (listed in Section 2), so they stay in sync across your devices
@@ -71,9 +74,11 @@ same Google and Firebase terms linked in Section 3.
 ## 5. No ads, no tracking, no analytics profiles
 
 Frankie contains **no advertising SDKs** and does **not** build an advertising or behavioural profile of
-you. We do not sell or share personal information. The only third-party services in the app are
+you. We do not sell or share personal information. The third-party services in the app are
 Google's: **Firebase Crashlytics** (Section 4), and **Firebase Authentication, Cloud Firestore, Cloud
 Storage for Firebase and Google Sign-In**, which are only used if you choose to sign in (Section 3).
+On iPhone you can also use **Sign in with Apple**, provided by Apple and governed by Apple's privacy
+policy (https://www.apple.com/legal/privacy/).
 
 ## 6. Children's privacy
 
@@ -86,9 +91,11 @@ collect personal information from children.
 - **Account data** (Section 3) is kept until you delete your account.
 - **Deleting your account**: in the app, open the **Profile** tab, tap your name, then tap
   **Delete account**. This permanently deletes your account, your profile photo, all of your backed-up
-  data, and all Frankie data on that device, right away. If you can't access the app, you can request
-  deletion at https://rroohit.github.io/frankie/delete-account or by emailing **sayro.team@gmail.com**
-  from the email address on your account. We complete emailed requests within 30 days.
+  data, and all Frankie data on that device, right away. If you used Sign in with Apple, Frankie also
+  revokes its Sign in with Apple access. If you can't access the app, you can request deletion at
+  https://rroohit.github.io/frankie/delete-account or by emailing **sayro.team@gmail.com** from the
+  email address on your account (if you hid your email with Apple, tell us the Apple ID email you
+  signed in with). We complete emailed requests within 30 days.
 - **Crash diagnostics** are retained by Firebase Crashlytics according to Google's retention policies
   (typically up to 90 days). They aren't linked to your account, so deleting your account doesn't
   affect them.

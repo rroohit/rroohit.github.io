@@ -11,14 +11,15 @@ You only have an account if you chose to sign in. Frankie works without one.
 1. Open Frankie and go to the **Profile** tab.
 2. Tap your name at the top to open your profile.
 3. Tap **Delete account** and confirm.
-4. Choose your Google account again to confirm it's you.
+4. Confirm with the account you signed in with (Google, or Sign in with Apple on iPhone).
 
 Your account is deleted right away.
 
 ## Request deletion without the app
 
 If you no longer have the app installed or can't sign in, email **sayro.team@gmail.com** from the
-email address on your Frankie account with the subject **"Delete my Frankie account"**. We'll delete
+email address on your Frankie account with the subject **"Delete my Frankie account"** (if you hid
+your email with Sign in with Apple, write from your Apple ID email and say so). We'll delete
 your account and data within **30 days** and reply to confirm.
 
 ## What gets deleted
@@ -28,6 +29,7 @@ your account and data within **30 days** and reply to confirm.
 - Everything backed up to your account: History, Favorites, Saved cities, usage counts, and
   Preferences
 - When you delete from the app, all Frankie data on that device too
+- If you used Sign in with Apple, Frankie's Sign in with Apple access is revoked
 
 ## What's kept
 
