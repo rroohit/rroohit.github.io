@@ -33,8 +33,14 @@ your account and data within **30 days** and reply to confirm.
 
 ## What's kept
 
-- **Nothing linked to your account.** Anonymous crash reports (Firebase Crashlytics) aren't tied to
-  your account and are deleted automatically by Google, typically within 90 days.
+- **Your Frankie Pro purchase, if you bought one.** It belongs to your Google Play or App Store
+  account, so deleting your Frankie account doesn't cancel or refund it. Google and Apple keep
+  purchase records under their own policies, and RevenueCat (our purchase service) keeps the
+  purchase record so you can restore Pro: tap **Restore purchases** to unlock it again. If you were
+  signed in, that record is linked to your account ID. Email us if you want it deleted too; you can
+  still restore your purchase from the store afterwards.
+- Anonymous crash reports (Firebase Crashlytics) aren't tied to your account and are deleted
+  automatically by Google, typically within 90 days.
 - Frankie data on *other* devices you used stays on those devices until you uninstall the app or
   clear it there. It is no longer backed up once your account is deleted.
 
