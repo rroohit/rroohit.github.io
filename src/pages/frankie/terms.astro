@@ -1,0 +1,18 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Prose from '@/components/Prose.astro';
+// Mirror of the app repo's .frankie/store/TERMS_OF_SERVICE.md (the master copy). This URL is the
+// "Terms of Service URL" in Play Console (app-level trader status) — keep it live and in sync.
+import { Content as Terms } from '@/data/frankie-terms.md';
+---
+
+<BaseLayout
+  title="Frankie — Terms of Service"
+  description="Terms of Service for Frankie, the everyday-tools app: using the app, the optional account, the one-time Frankie Pro purchase, and refunds."
+>
+  <section class="container-page max-w-3xl py-14 sm:py-20">
+    <Prose>
+      <Terms />
+    </Prose>
+  </section>
+</BaseLayout>
